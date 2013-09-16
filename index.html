@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Ember Starter Kit</title>
+<title>Travel Guide</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/travelguide.css">
@@ -10,16 +10,21 @@
 <body>
 
   <script type="text/x-handlebars">
-    <div>
-      <h1>TravelGuide</h1>
-    </div>
-    <hr/>
-    {{outlet}}
+      <div class="main-header">
+        <h1>
+         <span class="text-light">Travel</span><span class="text-highlight">Guide</span>
+        </h1>
+      </div>
+      <div class="main-content">
+        {{outlet}}
+      </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guides">
-    <h2>Mes guides</h2>
-    <hr/>
+    <div class="title-header">
+      <h2 class="text-highlight">Mes guides</h2>
+    </div>
+    <div class="inner-content">
     {{#each}}
       {{#link-to 'guide' this}}
 
@@ -30,29 +35,33 @@
 
       {{/link-to}}
     {{/each}}
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide">
     {{partial 'guide_header'}}
-    <hr/>
+
     {{partial 'guide_body'}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_header">
-    {{#link-to 'guides'}} <-- {{/link-to}}
-    &nbsp;
-    <b>{{title}}</b>
-    &nbsp;
-    Guide
-    &nbsp;
-    Carte
-    &nbsp;
-    Photos
-    &nbsp;
-    Notes
+    <div class="title-header">
+      {{#link-to 'guides'}} <-- {{/link-to}}
+      &nbsp;
+      <b>{{title}}</b>
+      &nbsp;
+      Guide
+      &nbsp;
+      Carte
+      &nbsp;
+      Photos
+      &nbsp;
+      Notes
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body">
+  <div class="inner-content">
     <table >
       <tr>
         <td valign="top" style="border:1px solid black">
@@ -63,6 +72,7 @@
         </td>
       </tr>
     </table>
+  </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body_leftpanel">
