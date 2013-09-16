@@ -9,17 +9,72 @@
 <body>
 
   <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
-
+    <div>
+      <h1>TravelGuide</h1>
+    </div>
+    <hr/>
     {{outlet}}
   </script>
 
-  <script type="text/x-handlebars" data-template-name="index">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
+  <script type="text/x-handlebars" data-template-name="guides">
+    <h2>Mes guides</h2>
+    <hr/>
+    {{#each}}
+      {{#link-to 'guide' this}}
+
+      <div class="homeGuideContainer">
+        {{title}} <br/>
+        ({{startDate}} -> {{endDate}})
+      </div>
+
+      {{/link-to}}
     {{/each}}
-    </ul>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide">
+    {{partial 'guide_header'}}
+    <hr/>
+    {{partial 'guide_body'}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide_header">
+    {{#link-to 'guides'}} <-- {{/link-to}}
+    &nbsp;
+    <b>{{title}}</b>
+    &nbsp;
+    Guide
+    &nbsp;
+    Carte
+    &nbsp;
+    Photos
+    &nbsp;
+    Notes
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide_body">
+    <table >
+      <tr>
+        <td valign="top" style="border:1px solid black">
+          {{partial 'guide_body_leftpanel'}}
+        </td>
+        <td valign="top" style="border:1px solid black;width:100%">
+          {{partial 'guide_body_mainpanel'}}
+        </td>
+      </tr>
+    </table>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide_body_leftpanel">
+    Résumé:
+    <hr/>
+    Départ:<br/>
+    {{startDate}}<br/><br/>
+    Arrivée:<br/>
+    {{endDate}}
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide_body_mainpanel">
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
