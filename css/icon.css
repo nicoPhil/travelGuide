@@ -1,0 +1,118 @@
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "travel-guide";
+  src:url("../font/travel-guide.eot");
+  src:url("../font/travel-guide.eot?#iefix") format("embedded-opentype"),
+    url("../font/travel-guide.ttf") format("truetype"),
+    url("../font/travel-guide.svg#travel-guide") format("svg"),
+    url("../font/travel-guide.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "travel-guide";
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "travel-guide";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.icon-globe:before {
+  content: "a";
+}
+
+.icon-level-up:before {
+  content: "b";
+}
+
+.icon-down-open-mini:before {
+  content: "c";
+}
+
+.icon-up-open-big:before {
+  content: "d";
+}
+
+.icon-back-in-time:before {
+  content: "e";
+}
+
+.icon-doc-text-inv:before {
+  content: "f";
+}
+
+.icon-compass:before {
+  content: "g";
+}
+
+.icon-flight:before {
+  content: "h";
+}
+
+.icon-location:before {
+  content: "i";
+}
+
+.icon-trash:before {
+  content: "j";
+}
+
+.icon-sun:before {
+  content: "k";
+}
+
+.icon-sun-1:before {
+  content: "l";
+}
+
+.icon-cloud-1:before {
+  content: "m";
+}
+
+.icon-celcius:before {
+  content: "n";
+}
+
+.icon-farenheit:before {
+  content: "o";
+}
+
+.icon-rain-black-2:before {
+  content: "p";
+}
+
+.icon-fog-sunrise:before {
+  content: "q";
+}
+
+.icon-eye:before {
+  content: "r";
+}
+

@@ -12,7 +12,9 @@
   <script type="text/x-handlebars">
       <div class="main-header">
         <h1>
-         <span class="text-light">Travel</span><span class="text-highlight">Guide</span>
+        <div data-icon="a">
+          <span class="text-light">Travel</span><span class="text-highlight">Guide</span>
+        </div>
         </h1>
       </div>
       <div class="main-content">
@@ -24,13 +26,19 @@
     <div class="title-header">
       <h2 class="text-highlight">Mes guides</h2>
     </div>
-    <div class="inner-content">
+    <div class="inner-content frame">
     {{#each}}
       {{#link-to 'guide' this}}
-
-      <div class="homeGuideContainer">
-        {{title}} <br/>
-        ({{startDate}} -> {{endDate}})
+      <div class="bit-6">
+        <div class="one-guide-container ">
+          <div class="one-guide-date">
+            <div class="date-debut">{{startDate}}</div>
+            <div class="date-fin">{{endDate}})</div>
+          </div>
+          <div class="one-guide-titre">
+            <h2 class="text-highlight">{{title}}</h2>
+          </div>
+        </div>
       </div>
 
       {{/link-to}}

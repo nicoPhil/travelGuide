@@ -1,5 +1,16 @@
 @import "elements";
 @import "vars";
+@import "icon.css";
+@import "lemonade.css";
+
+.frame {
+  width: 100%;
+  margin: 0px auto;
+}
+
+div {
+	.box-sizing(content-box);
+}
 
 @font-face {
     font-family: 'bebas_neueregular';
@@ -26,30 +37,39 @@ html,body {
 	font-family: 'bebas_neueregular';
 	color:@colorLight-00;
 	height: 100%;
+	font-size: 12px;
 	 background-color:rgba(19,19,19,0.7);
 }
 
 .main-header {
 	h1 {
+		font-weight: normal;
 		padding:0;
 		text-transform: uppercase;
 		margin: 0;
+		display: inline-block;
+		[data-icon="a"] {
+			font-size: 1em;
+			span {
+				font-size:1.4em; 
+			}
+		}
 	}
-	padding:10px 20px;
+	padding:10px 40px;
 	background: @colorDark-00;
 	.box-shadow(inset 0px -1px 1px 0px #202020);
 	border-bottom:1px solid @colorDark;
 }
 
 .title-header {
-	min-height: 47px;
-
+	min-height: 60px;
 	h2 {
 		padding: 0;
 		margin:0;
-		top: 10px;
+		top: 15px;
 		position: relative;
-		padding-left: 20px;
+		padding-left: 40px;
+		font-size: 2.3em;
 	}
 	background: @colorDark-02;
 	.box-shadow(inset 0px -1px 1px 0px #202020);
@@ -57,5 +77,31 @@ html,body {
 }
 
 .inner-content {
-	padding:20px;
+	padding:20px 40px;
 }
+
+.one-guide-container {
+	background: @colorDark-00;
+	border: 1px solid @colorDark;
+	.rounded(3px);
+	min-height: 65px;
+	.box-shadow(inset 0px 1px 0px 0px #202020);
+	.one-guide-titre {
+		float: left;
+		padding: 4px;
+		padding-left: 10px;
+		h2 {
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: 1.8em;
+		}	
+	}
+	.one-guide-date {
+		min-height: 65px;
+		float: left;
+		border-right: 1px solid @colorDark;
+		.box-shadow(1px 0px 0px 0px #202020);
+	}
+	
+}
+
