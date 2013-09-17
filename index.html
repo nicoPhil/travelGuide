@@ -86,6 +86,14 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body_mainpanel">
+    {{#each step in steps}}
+      {{partial 'guide_body_mainpanel_detail'}}
+    <hr/>
+    {{/each}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="guide_body_mainpanel_detail">
+    coucou
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
