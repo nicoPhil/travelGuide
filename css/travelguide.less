@@ -3,12 +3,14 @@
 @import "icon.css";
 @import "lemonade.css";
 
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic");
+
 .frame {
   width: 100%;
   margin: 0px auto;
 }
 
-div {
+* {
 	.box-sizing(content-box);
 }
 
@@ -33,12 +35,17 @@ html {
 
 }
 
-html,body {
+h1,h2,h3,h4,h5,h6  {
 	font-family: 'bebas_neueregular';
+}
+
+html,body {
+
 	color:@colorLight-00;
 	height: 100%;
 	font-size: 12px;
 	 background-color:rgba(19,19,19,0.7);
+	 font-family: 'Source Sans Pro', sans-serif;
 }
 
 .main-header {
@@ -85,6 +92,7 @@ html,body {
 	border: 1px solid @colorDark;
 	.rounded(3px);
 	min-height: 65px;
+
 	.box-shadow(inset 0px 1px 0px 0px #202020);
 	.one-guide-titre {
 		float: left;
@@ -101,6 +109,15 @@ html,body {
 		float: left;
 		border-right: 1px solid @colorDark;
 		.box-shadow(1px 0px 0px 0px #202020);
+		/*padding:3px;*/
+		padding: 4px;
+		.date-debut, .date-fin {
+			color: @colorLight-02;
+		}
+
+		.date-fin {
+
+		}
 	}
 	
 }
