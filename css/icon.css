@@ -116,3 +116,7 @@
   content: "r";
 }
 
+.icon-level-down:before {
+  content: "s";
+}
+

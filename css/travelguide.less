@@ -11,7 +11,7 @@
 }
 
 * {
-	.box-sizing(content-box);
+	.box-sizing(border-box);
 }
 
 @font-face {
@@ -68,8 +68,14 @@ html,body {
 	border-bottom:1px solid @colorDark;
 }
 
+.header {
+	background: @colorDark-02;
+	.box-shadow(inset 0px -1px 1px 0px #202020);
+	border-bottom:1px solid @colorLight-02;
+	height: 60px;	
+}
+
 .title-header {
-	min-height: 60px;
 	h2 {
 		padding: 0;
 		margin:0;
@@ -78,9 +84,22 @@ html,body {
 		padding-left: 40px;
 		font-size: 2.3em;
 	}
-	background: @colorDark-02;
-	.box-shadow(inset 0px -1px 1px 0px #202020);
-	border-bottom:1px solid @colorLight-02;
+}
+
+.menu-header {
+	padding-left: 40px;
+	.back-menu {
+		font-size: 2.5em;
+		float: left;
+		display: inline-block;
+		.rotation(180deg);
+		color:@colorDark;
+		position: relative;
+		top: 5px;
+		&:hover{
+			color:@colorPrimary;
+		}
+	}
 }
 
 .inner-content {
@@ -91,8 +110,7 @@ html,body {
 	background: @colorDark-00;
 	border: 1px solid @colorDark;
 	.rounded(3px);
-	min-height: 65px;
-
+	min-height: 67px;
 	.box-shadow(inset 0px 1px 0px 0px #202020);
 	.one-guide-titre {
 		float: left;
@@ -101,10 +119,11 @@ html,body {
 		h2 {
 			text-transform: uppercase;
 			font-weight: normal;
-			font-size: 1.8em;
+			font-size: 2em;
 		}	
 	}
 	.one-guide-date {
+		padding:10px;
 		min-height: 65px;
 		float: left;
 		border-right: 1px solid @colorDark;
@@ -117,6 +136,21 @@ html,body {
 
 		.date-fin {
 
+		}
+	}
+
+	.one-guide-icon {
+		float: right;
+		position: relative;
+		top: 20px;
+		right: 20px;
+		font-size: 1.5em;
+		color: @colorDark;
+	}
+
+	&:hover {
+		.one-guide-icon {
+			color: @colorPrimary;
 		}
 	}
 	

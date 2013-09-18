@@ -23,7 +23,7 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="guides">
-    <div class="title-header">
+    <div class="header title-header">
       <h2 class="text-highlight">Mes guides</h2>
     </div>
     <div class="inner-content frame">
@@ -38,6 +38,9 @@
           <div class="one-guide-titre">
             <h2 class="text-highlight">{{title}}</h2>
           </div>
+          <div class="one-guide-icon">
+              <div data-icon="a"></div>
+           </div>
         </div>
       </div>
 
@@ -53,8 +56,8 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_header">
-    <div class="title-header">
-      {{#link-to 'guides'}} <-- {{/link-to}}
+    <div class="header menu-header">
+      {{#link-to 'guides'}} <div  class="back-menu" data-icon="s"></div> {{/link-to}}
       &nbsp;
       <b>{{title}}</b>
       &nbsp;
