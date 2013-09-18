@@ -58,16 +58,21 @@
   <script type="text/x-handlebars" data-template-name="guide_header">
     <div class="header menu-header">
       {{#link-to 'guides'}} <div  class="back-menu" data-icon="s"></div> {{/link-to}}
-      &nbsp;
-      <b>{{title}}</b>
-      &nbsp;
-      Guide
-      &nbsp;
-      Carte
-      &nbsp;
-      Photos
-      &nbsp;
-      Notes
+      <h2 class="text-highlight">{{title}}</h2>
+      <ul>
+        <li class="selected">
+          {{#link-to ''}} Guide {{/link-to}}
+        </li>
+        <li>
+          {{#link-to ''}}Carte{{/link-to}}
+        </li>
+        <li>
+          {{#link-to ''}}Photos{{/link-to}}
+        </li>
+        <li>
+          {{#link-to ''}}Notes{{/link-to}}
+        </li>
+      </ul>
     </div>
   </script>
 

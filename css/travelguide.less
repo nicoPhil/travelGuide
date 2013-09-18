@@ -88,6 +88,14 @@ html,body {
 
 .menu-header {
 	padding-left: 40px;
+	h2 {
+		padding: 0;
+		margin:0;
+		top: 15px;
+		position: relative;
+		font-size: 2.3em;
+		display: inline-block;
+	}
 	.back-menu {
 		font-size: 2.5em;
 		float: left;
@@ -98,6 +106,32 @@ html,body {
 		top: 5px;
 		&:hover{
 			color:@colorPrimary;
+		}
+	}
+
+	ul {
+		display: inline-block;
+		position: relative;
+		top: 20px;
+		left: 10px;
+		li {
+			display: inline-block;
+			list-style: none;
+			&.selected {
+				a { color: @colorPrimary; }
+			}
+			&:hover {
+				a {
+					color: @colorPrimary;
+				}
+			}
+			a {
+				text-decoration: none;
+				font-size: 1.5em;
+				text-transform: uppercase;
+				color: @colorLight-01;
+
+			}
 		}
 	}
 }
