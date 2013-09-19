@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Travel Guide</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,7 +30,7 @@
     {{#each}}
       {{#link-to 'guide' this}}
       <div class="bit-6">
-        <div class="one-guide-container">
+        <div class="one-guide-container box-container">
           <div class="one-guide-date">
             <div class="date-debut">{{startDate}}</div>
             <div class="date-fin">{{endDate}}</div>
@@ -78,34 +78,41 @@
 
   <script type="text/x-handlebars" data-template-name="guide_body">
   <div class="inner-content">
-    <table >
-      <tr>
-        <td valign="top" style="border:1px solid black">
-          {{partial 'guide_body_leftpanel'}}
-        </td>
-        <td valign="top" style="border:1px solid black;width:100%">
-          {{partial 'guide_body_mainpanel'}}
-        </td>
-      </tr>
-    </table>
+    <div class="frame">
+      <div class="bit-15p">
+        {{partial 'guide_body_leftpanel'}}
+      </div>
+
+      <div class="bit-85">
+        {{partial 'guide_body_mainpanel'}}
+      </div>
+    </div>
   </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body_leftpanel">
-    Résumé:
-    <hr/>
-    Départ:<br/>
-    {{startDate}}<br/><br/>
-    Arrivée:<br/>
-    {{endDate}}
-
+    <div class="box-container resume-container">
+      <h2 class="text-highlight">Résumé</h2>
+      <div class="inner-content">
+        <div class="margintop5"></div>
+        <label>départ</label>
+        {{startDate}}
+        <div class="margintop5"></div>
+        <label>arrivée</label>
+        {{endDate}}
+        <div class="margintop5"></div>
+        <label>prix</label>
+        {{endDate}}
+      </div>
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body_mainpanel">
-    {{#each step in steps}}
-      {{partial 'guide_body_mainpanel_detail'}}
-    <hr/>
-    {{/each}}
+      <div class="box-container">
+        {{#each step in steps}}
+          {{partial 'guide_body_mainpanel_detail'}}
+        {{/each}}
+      </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="guide_body_mainpanel_detail">
